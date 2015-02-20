@@ -29,8 +29,7 @@ exports.addProject = function(req, res) {
   newProject.save(afterSaving);
 
   function afterSaving(err){
-    if(err) {console.log(err);
-      res.send(500);}
+    if(err) {console.log(err);res.send(500);}
     res.redirect('/');
   }
 }
